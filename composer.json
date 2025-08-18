@@ -1,16 +1,20 @@
 {
     "name": "obelaw/trail",
-    "description": "Minimal, tenant-aware activity trail for Eloquent models.",
+    "description": "Minimal, activity trail for Eloquent models.",
     "type": "library",
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "illuminate/support": "^10.0|^11.0"
+        "illuminate/support": "^10.0|^11.0",
+        "obelaw/twist": "dev-main"
     },
     "autoload": {
         "psr-4": {
             "Obelaw\\Trail\\": "src/"
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "extra": {
         "laravel": {
@@ -18,5 +22,7 @@
                 "Obelaw\\Trail\\TrailServiceProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
